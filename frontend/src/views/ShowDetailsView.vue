@@ -85,7 +85,7 @@ onMounted(() => {
                     <TabPanel v-for="season, index in show.Seasons" :key="season.id" :value="index" id="tab-panel">
                         <p class="overview-text">{{ season.overview || "No overview found" }}</p>
                         <div id="episodes-container">
-                            <div v-for="episodeNR in season.episode_count" id="watch-button"
+                            <div v-for="episodeNR in season.episode_count" id="watch-episode-button"
                                 @click="gotoStreamView(season.season_number, episodeNR, season.episode_count)">Episode {{ episodeNR }}
                             </div>
                         </div>
@@ -136,7 +136,7 @@ onMounted(() => {
     font-size: x-large;
 }
 
-#watch-button {
+#watch-episode-button {
     background-color: rgb(56, 77, 112);
     border-radius: 20px;
     border: 2px solid rgb(46, 64, 92);
@@ -145,7 +145,7 @@ onMounted(() => {
     margin: 3px;
 }
 
-#watch-button:hover {
+#watch-episode-button:hover {
     background-color: rgb(41, 57, 82);
     cursor: pointer;
 }

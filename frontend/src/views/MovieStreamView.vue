@@ -24,7 +24,7 @@ async function fetchDetails() {
 }
 
 function getMovieID() {
-    return "https://vsembed.su/embed/movie?tmdb=" + movie.value.ID
+    return "https://vsembed.ru/embed/movie?tmdb=" + movie.value.ID
 }
 
 onMounted(() => {

@@ -35,7 +35,7 @@ async function fetchDetails() {
 }
 
 function getShowID() {
-    return `https://vsembed.su/embed/tv?tmdb=${show.value.ID}&season=${show.value.SeasonNr}&episode=${show.value.EpisodeNr}`
+    return `https://vsembed.ru/embed/tv?tmdb=${show.value.ID}&season=${show.value.SeasonNr}&episode=${show.value.EpisodeNr}`
 }
 
 function isFirstEpisode() {

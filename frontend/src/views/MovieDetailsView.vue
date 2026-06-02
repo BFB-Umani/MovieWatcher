@@ -43,7 +43,7 @@ const roundRating = computed(() => {
 })
 
 function gotoStreamView() {
-    router.push({ path: `/stream/${movie.value.ID}` })
+    router.push({ path: `/movies/stream/${movie.value.ID}` })
 }
 
 onMounted(() => {
