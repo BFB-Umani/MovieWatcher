@@ -1,5 +1,35 @@
 export namespace main {
 	
+	export class Episode {
+	    AirDate: string;
+	    EpisodeNumber: number;
+	    ID: number;
+	    Name: string;
+	    Overview: string;
+	    ProductionCode: string;
+	    Runtime: number;
+	    SeasonNumber: number;
+	    ShowID: number;
+	    StillPath: string;
+	
+	    static createFrom(source: any = {}) {
+	        return new Episode(source);
+	    }
+	
+	    constructor(source: any = {}) {
+	        if ('string' === typeof source) source = JSON.parse(source);
+	        this.AirDate = source["AirDate"];
+	        this.EpisodeNumber = source["EpisodeNumber"];
+	        this.ID = source["ID"];
+	        this.Name = source["Name"];
+	        this.Overview = source["Overview"];
+	        this.ProductionCode = source["ProductionCode"];
+	        this.Runtime = source["Runtime"];
+	        this.SeasonNumber = source["SeasonNumber"];
+	        this.ShowID = source["ShowID"];
+	        this.StillPath = source["StillPath"];
+	    }
+	}
 	export class Movie {
 	    ID: number;
 	    Title: string;

@@ -17,7 +17,7 @@ function goToSerieListView() {
 
 <template>
     <div>
-        <h1>Do you want to watch a movie or a TV show?</h1>
+        <h1 id="start-h1">Do you want to watch a movie or a TV show?</h1>
         <div id="choice-container">
             <ContentCard :-poster-path="movieTime" -title="Movie Time!" @on-click-card="goToMovieListView"/>
             <ContentCard :-poster-path="tvTime" -title="TV Time!" @on-click-card="goToSerieListView"/>
@@ -30,5 +30,9 @@ function goToSerieListView() {
     display: flex;
     justify-content: space-around;
     margin-top: 15%;
+}
+#start-h1 {
+    padding-top: 40px;
+    margin: 0px;
 }
 </style>

@@ -72,10 +72,10 @@ onMounted(() => {
         <BackButton @on-click-card="clickBackButton"/>
         <div class="buttons-and-player">
             <div class="buttons-container">
-                <div v-if="!isFirstEpisode()" id="watch-button" @click="gotoPreviousEpisode()">
+                <div v-if="!isFirstEpisode()" id="watch-episode-button" @click="gotoPreviousEpisode()">
                     < Previous 
                 </div>
-                <div v-if="!isLastEpisode()" id="watch-button" @click="gotoNextEpisode()">
+                <div v-if="!isLastEpisode()" id="watch-episode-button" @click="gotoNextEpisode()">
                             Next > 
                 </div>
             </div>

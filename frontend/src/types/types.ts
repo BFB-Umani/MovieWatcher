@@ -34,3 +34,16 @@ type Season = {
     vote_average?: number;
     show_id?: number;
 }
+
+type Episode = {
+    AirDate: string;
+    EpisodeNumber: number;
+    ID: number;
+    Name: string;
+    Overview: string;
+    ProductionCode: string;
+    Runtime: number;
+    SeasonNumber: number;
+    ShowID: number;
+    StillPath: string;
+}

@@ -4,6 +4,8 @@ import {main} from '../models';
 
 export function GetMovieDetails(arg1:number):Promise<main.Movie>;
 
+export function GetSeasonEpisodes(arg1:number,arg2:number):Promise<Array<main.Episode>>;
+
 export function GetShowDetails(arg1:number):Promise<main.Show>;
 
 export function GetTrendingMovies():Promise<Array<main.Movie>>;

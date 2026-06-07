@@ -6,6 +6,10 @@ export function GetMovieDetails(arg1) {
   return window['go']['main']['App']['GetMovieDetails'](arg1);
 }
 
+export function GetSeasonEpisodes(arg1, arg2) {
+  return window['go']['main']['App']['GetSeasonEpisodes'](arg1, arg2);
+}
+
 export function GetShowDetails(arg1) {
   return window['go']['main']['App']['GetShowDetails'](arg1);
 }

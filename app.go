@@ -28,6 +28,19 @@ type Show struct {
 	Seasons     []tmdb.Season
 }
 
+type Episode struct {
+	AirDate        string
+	EpisodeNumber  int
+	ID             int64
+	Name           string
+	Overview       string
+	ProductionCode string
+	Runtime        int
+	SeasonNumber   int
+	ShowID         int64
+	StillPath      string
+}
+
 var tmdbClient *tmdb.Client
 var err = error(nil)
 
@@ -151,4 +164,30 @@ func (a *App) GetShowDetails(id int) (Show, error) {
 	}
 	poster := tmdb.GetImageURL(details.PosterPath, tmdb.Original)
 	return Show{details.ID, details.Name, details.FirstAirDate, details.Overview, poster, details.VoteAverage, details.Seasons}, nil
+}
+
+func (a *App) GetSeasonEpisodes(id int, seasonNr int) ([]Episode, error) {
+	options := make(map[string]string)
+	options["language"] = "en-US"
+	details, err := tmdbClient.GetTVSeasonDetails(id, seasonNr, options)
+	if err != nil {
+		fmt.Println(err)
+		return []Episode{}, err
+	}
+	showEpisodes := []Episode{}
+	for _, episode := range details.Episodes {
+		stillPath := tmdb.GetImageURL(episode.StillPath, tmdb.Original)
+		showEpisode := Episode{
+			AirDate:        episode.AirDate,
+			EpisodeNumber:  episode.EpisodeNumber,
+			ID:             episode.ID,
+			Name:           episode.Name,
+			Overview:       episode.Overview,
+			ProductionCode: episode.ProductionCode,
+			Runtime:        episode.Runtime,
+			StillPath:      stillPath,
+		}
+		showEpisodes = append(showEpisodes, showEpisode)
+	}
+	return showEpisodes, nil
 }
