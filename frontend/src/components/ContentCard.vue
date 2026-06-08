@@ -51,7 +51,7 @@ const imageWContainerWidth = computed(() => {
         <img id="poster" :src="PosterPath" :width="imageWidth">
         <div id="year-title-container">
             <p id="title">{{ getTitle }}</p>
-            <div id="test">
+            <div id="year-and-rating">
                 <p>{{ releaseYear }}</p>
                 <p v-if="Rating" id="rating">
                     {{ roundRating }}
@@ -102,7 +102,7 @@ const imageWContainerWidth = computed(() => {
     margin-bottom: -20px;
     width: 100%
 }
-#test {
+#year-and-rating {
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -61,7 +61,7 @@ onMounted(() => {
             <img id="poster-details" :src="movie.PosterPath" width="300px">
             <div id="year-title-container">
                 <p id="title">{{ movie.Title }}</p>
-                <div id="test">
+                <div id="year-and-rating">
                     <p>{{ releaseYear }}</p>
                     <p id="rating">
                         {{ roundRating }}

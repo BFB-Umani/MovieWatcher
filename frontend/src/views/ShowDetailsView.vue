@@ -82,7 +82,7 @@ onMounted(() => {
                 <img id="poster-details" :src="show.PosterPath" width="300px">
                 <div id="year-title-container">
                     <p id="title">{{ show.Title }}</p>
-                    <div id="test">
+                    <div id="year-and-rating">
                         <p>{{ releaseYear }}</p>
                         <p id="rating">
                             {{ roundRating }}
@@ -133,7 +133,6 @@ onMounted(() => {
 
 #episodes-container {
     margin-bottom: 40px;
-    overflow: scroll;
     height: 100%;
 }
 
