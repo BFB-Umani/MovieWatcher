@@ -7,6 +7,8 @@ import Aura from '@primeuix/themes/aura';
 
 createApp(App).use(router).use(PrimeVue, {
     theme: {
-        preset: Aura
+        preset: Aura, options: {
+            darkModeSelector: '.darkmode',
+        }
     }
 }).mount('#app')
