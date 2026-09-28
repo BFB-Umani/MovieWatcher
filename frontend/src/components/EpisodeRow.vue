@@ -2,7 +2,7 @@
 
 const props = defineProps({
     Title: { type: String, required: true },
-    EpisodeNr: { type: String, required: true },
+    EpisodeNr: { type: Number, required: true },
     PosterPath: { type: String, required: true },
     Overview: { type: String, required: true },
 })

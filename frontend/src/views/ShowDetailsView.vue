@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 
-import { computed, getCurrentInstance, onMounted, ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { GetShowDetails, GetSeasonEpisodes } from "../../wailsjs/go/main/App.js";
 import BackButton from "../components/BackButton.vue";
 import { useRoute, useRouter } from 'vue-router'
