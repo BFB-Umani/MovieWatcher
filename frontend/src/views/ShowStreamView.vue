@@ -16,6 +16,8 @@ const show = ref({
     NrOfEpisodes: 0,
 })
 
+const embedLink = import.meta.env.VITE_EMBED_LINK
+
 async function fetchDetails() {
     const showIDStr = route.params.id as string
     const showID = Number(showIDStr)
@@ -35,7 +37,7 @@ async function fetchDetails() {
 }
 
 function getShowID() {
-    return `https://vsembed.ru/embed/tv?tmdb=${show.value.ID}&season=${show.value.SeasonNr}&episode=${show.value.EpisodeNr}`
+    return `${embedLink}/embed/tv?tmdb=${show.value.ID}&season=${show.value.SeasonNr}&episode=${show.value.EpisodeNr}`
 }
 
 function isFirstEpisode() {

@@ -8,6 +8,8 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
+const embedLink = import.meta.env.VITE_EMBED_LINK
+
 const movie = ref({
     ID: 0,
     Title: "",
@@ -24,7 +26,7 @@ async function fetchDetails() {
 }
 
 function getMovieID() {
-    return "https://vsembed.ru/embed/movie?tmdb=" + movie.value.ID
+    return embedLink + "/embed/movie?tmdb=" + movie.value.ID
 }
 
 onMounted(() => {
